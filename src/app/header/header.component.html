@@ -1,0 +1,27 @@
+
+
+
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <img src="../../assets/logo.png" width="60px" height="60px" alt="">
+      <span class="homecakes">Kanban Board</span>
+<!-- <button style="margin-left: 84%;" mat-icon-button class="more-button" [matMenuTriggerFor]="menu" -->
+  <div class="icon">
+    <button routerLink="" mat-raised-button matTooltip="Home" color="primary" title="Home"><mat-icon>home</mat-icon></button>
+    <button *ngIf="!(Role === 'user' || Role === 'Admin')" routerLink="login" mat-raised-button matTooltip="Login" color="primary" title="Login"><mat-icon>login</mat-icon></button>
+    <button *ngIf="Role === 'Admin'" routerLink="register" mat-raised-button matTooltip="register" color="primary" title="register"><mat-icon>account_circle</mat-icon></button>
+    <button *ngIf="Role === 'user' || Role === 'Admin'" (click)="logout()" mat-raised-button matTooltip="Logout" color="primary" title="LogOut"><mat-icon>logout </mat-icon></button>
+  </div>
+  
+  
+
+    
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

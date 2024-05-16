@@ -1,0 +1,116 @@
+.kanban-dashboard {
+  display: flex;
+  justify-content: space-around;
+  height: 634px;
+}
+
+.heading{
+    height:90px;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.heading button{
+    margin-left: 91%;
+}
+
+.column {
+  width: 25%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 1%;
+  border-radius: 5px;
+  background-color: #ecf2f5;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+h1{
+  font-size: 40px;
+  margin-left: 6%;
+  margin-top: 3%;
+  font-weight: 400;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+  height: 8%;
+  font-size: large;
+  margin: 3%;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+}
+
+hr{
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}
+
+.task-item {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.todo {
+  border-color: #ffcc00;
+}
+
+.in-progress {
+  border-color: #3399ff;
+}
+
+.done {
+  border-color: #33cc33;
+}
+
+.task{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  /*overflow: scroll;*/
+}
+mat-card {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+mat-card-header {
+  background-color: #2b8ae9;
+  color: white;
+}
+/* Remove the background-color property for mat-card */
+.add-task-container{
+  margin-left: 50px;
+}
+
+/* Add styles for priority dot */
+.priority-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Define colors for different priorities */
+.low-priority {
+  background-color: red; /* Example: Green for low priority */
+}
+
+.medium-priority {
+  background-color: blue; /* Example: Yellow for medium priority */
+}
+
+.high-priority {
+  background-color: green; /* Example: Red for high priority */
+}

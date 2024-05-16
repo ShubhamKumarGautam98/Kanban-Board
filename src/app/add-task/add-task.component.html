@@ -1,0 +1,67 @@
+<img style="width:100%; height:90%;" src="../../assets/register-background3.jpeg" alt="">
+<div class="main-container">
+  <h2>Add Task</h2>
+  <hr>
+  <div class="container">
+    <form class="form" #addTaskForm="ngForm" (ngSubmit)="addTask()">
+      <mat-form-field>
+        <mat-label for="taskName">Task Name</mat-label>
+        <input matInput placeholder="Enter Task Name" name="taskName" [(ngModel)]="taskData.taskName" #taskName="ngModel"
+          required minlength="5" pattern="[A-Z][a-zA-Z\s]*" />
+        <mat-error *ngIf="taskName.errors?.['required']">Task name is required</mat-error>
+        <mat-error *ngIf="taskName.errors?.['minlength']">Must have a minimum length of
+          {{taskName.errors?.['minlength']?.requiredLength}} characters</mat-error>
+        <mat-error *ngIf="taskName.errors?.['pattern']">
+          Should start with a capital letter and contain only letters and spaces.
+        </mat-error>
+      </mat-form-field><br><br>
+      <mat-form-field appearance="outline">
+        <mat-label for="taskDescription">Task Description</mat-label>
+        <input matInput placeholder="Enter Task Description" name="taskDescription" [(ngModel)]="taskData.taskDescription"
+          #taskDescription="ngModel" required />
+        <mat-error *ngIf="taskDescription.errors?.['required']">Description is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Task Due Date</mat-label>
+        <input matInput [matDatepicker]="picker" name="dueDate" required [(ngModel)]="taskData.dueDate" [min]="minDate"
+          required #dueDate="ngModel" />
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="dueDate.errors?.['required']">Due date is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Assigned To</mat-label>
+        <mat-select name="assignedTo" required [(ngModel)]="taskData.assignTo" #assignedTo="ngModel">
+
+          <ng-container *ngFor="let user of userData">
+            <mat-option *ngIf="user.role === 'user'" [value]="user.emailId">
+              {{ user.emailId }}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+        <mat-error *ngIf="assignedTo.invalid && assignedTo.touched">
+          assignedTo is required
+        </mat-error>
+          <!-- <mat-option *ngFor="let user of userData" [value]="user.emailId">{{ user.emailId }}</mat-option>
+
+        </mat-select>
+        <mat-error *ngIf="assignedTo.invalid && assignedTo.touched">
+          Assigned To is required
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <mat-select name="priority" [(ngModel)]="taskData.priority" required #priority="ngModel">
+          <mat-option value="Low">Low</mat-option>
+          <mat-option value="Medium">Medium</mat-option>
+          <mat-option value="High">High</mat-option>
+        </mat-select>
+        <mat-error *ngIf="priority.invalid && priority.touched">
+          Priority is required
+        </mat-error>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary" [disabled]="addTaskForm.invalid">Add Task</button>
+    </form>
+  </div>
+</div>

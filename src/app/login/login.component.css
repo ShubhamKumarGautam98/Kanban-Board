@@ -1,0 +1,117 @@
+.example-form {
+    min-width: 150px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+
+
+  /* carousel-editing-here  */
+  .carousel{
+    width:800px;
+    height:auto;
+    float: left;
+    box-shadow: 0px 0px 10px rgb(81, 81, 81);
+    border-top-left-radius:80%;
+    border-bottom-right-radius: 80%;
+  }
+  .carousel-item img{
+    width:800px;
+    height:690px;
+    box-shadow: 0px 0px 10px rgb(81, 81, 81);
+    border-top-left-radius:80%;
+    border-bottom-right-radius: 80%;
+    
+  }
+  #carouselExampleSlidesOnly{
+    width:800px;
+    height:690px;
+    box-shadow: 0px 0px 10px rgb(81, 81, 81);
+    border-top-left-radius:80% ;
+    border-bottom-right-radius: 80%;
+  }
+
+
+  /* login-page-editing-here */
+
+  #heading-1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: rgb(6, 6, 190);
+    }
+  #heading-2{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: rgb(109, 109, 109);
+  }
+
+  .login-body{
+    
+    margin: 100px 50px 100px 0px;
+    float: right;
+  }
+   .login-form{
+    width:400px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(81, 81, 81);
+    border-radius: 5px;
+    background-color: white;
+    /* background-image: url("https://t4.ftcdn.net/jpg/05/63/62/07/360_F_563620783_9icanRCanLxCe2h7SzwhSQvoEqS9RWSG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;   */
+  }
+   
+  #login-Head{
+    text-align: center;
+    font-size:xx-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(6, 6, 190);
+    padding: 30px;
+  }
+  
+  #login-button{
+    margin: 5px;
+    background-color: rgb(25, 25, 201);
+    color: white;
+  }
+  
+  #cancel-button{
+    margin: 5px;
+  }
+  
+  #regis-link{
+    text-decoration: none;
+    color: #1302ff;
+    font-weight: bold;
+    
+  }
+  #member{
+    color: black;
+  }
+
+
+  
+  @media screen and (max-width:768px){
+    #input-field{
+      width:300px;
+      height: auto;
+      margin: 0px auto;
+    }
+    .button-field{
+      width:300px;
+      height: auto;
+      margin: 0px auto;
+    }
+  }
+
+
+
+  

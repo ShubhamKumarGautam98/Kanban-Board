@@ -1,0 +1,60 @@
+<div class="login-body">
+  <h1 id="heading-1">Welcome Back</h1>
+  <h3 id="heading-2">Nice To See you Again</h3>
+ <div class="login-form">
+    <form  class="example-form" (ngSubmit)="login()" #loginpage="ngForm">
+        <h1 id="login-Head">Login</h1>
+
+
+        <div id="input-field">
+            <mat-form-field class="example-full-width">
+                <mat-label>emailId</mat-label>
+                <input matInput type="text" #emailId="ngModel" name="credentials.emailId" [(ngModel)]="credentials.emailId" required email="">
+                <div *ngIf="emailId?.touched">
+                    <mat-error *ngIf="emailId?.errors?.['email'] && emailId?.touched">Enter a valid email address</mat-error>
+                    <mat-error *ngIf="emailId?.errors?.['required']">emailId is required</mat-error>
+                </div>
+            </mat-form-field>
+        </div>
+        <div id="input-field">
+          <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <i [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'" (click)="togglePasswordVisibility()"></i>
+              <input type="{{visible ? 'text' : 'password'}}" matInput  #password="ngModel" name="credentials.password" [(ngModel)]="credentials.password"
+              required >
+
+                      <div *ngIf="password?.touched">
+                          <mat-error *ngIf="password?.errors?.['required']">Password is mandatory</mat-error>
+                          <mat-error *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters long</mat-error>
+
+                      </div>
+
+          </mat-form-field>
+      </div>
+        <div class="button-field">
+        
+            <button id="login-button"  mat-raised-button [disabled]="!loginpage.valid" type="submit" >login</button>
+            <button id="cancel-button" mat-raised-button color="accent" type="reset">cancel</button>
+
+        </div>
+        
+        
+    </form>
+    </div>
+</div>
+
+<div class="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/login.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/istockphoto-1451737966-612x612.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/image-blog-alm-kanban-board-gemba-walk.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+</div>

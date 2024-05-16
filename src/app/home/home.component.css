@@ -1,0 +1,36 @@
+
+.heading{
+    margin-top: 20px;
+    text-decoration: underline;
+    text-align: center;
+    color: #6c7ecf;
+    font-style: italic;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.team-card{
+    width: 340px;
+    height: 380px;
+    margin: 40px;
+    border: 1px solid #6c7ecf;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+   
+  }
+
+  .team-card img {
+    width: 80%;
+    height: auto;
+    margin: 4% 12%;
+    border-bottom: 1px solid #ccc;
+    border-radius: 2%;
+  }
+
+.member-details{
+    text-align: center;
+    margin-top: 30%;
+}

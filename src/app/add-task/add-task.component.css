@@ -1,0 +1,38 @@
+.main-container{
+    width: 500px;
+    position: absolute;
+    border: rgb(48, 44, 44) solid 2px;
+    box-shadow: 5px 5px 10px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: -620px 500px;
+}
+
+
+
+.container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    margin-left: 40px;
+}
+
+mat-form-field{
+    width: 320px;
+}
+
+h2{
+    text-align: center;
+}
+
+.form{
+    margin-top: 30px;
+    width: 3px;
+    margin-left: 4%;
+}
+
+button{
+    margin-left: 91%;
+    width: 190px;
+}
